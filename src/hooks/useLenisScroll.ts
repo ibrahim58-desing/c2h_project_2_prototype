@@ -25,11 +25,11 @@ export function useLenisScroll(enabled = true) {
 
     lenisRef.current = lenis
 
-    const updateStore = throttle((velocity: number, progress: number) => {
+    const updateStore = (velocity: number, progress: number) => {
       setScrollProgress(progress)
       const windBoost = Math.min(Math.abs(velocity) * 0.015, 0.5)
       setWindIntensity(0.25 + windBoost)
-    }, 32)
+    }
 
     lenis.on('scroll', ({ velocity, progress }: { velocity: number; progress: number }) => {
       updateStore(velocity, progress)

@@ -8,13 +8,15 @@ const targetPos = new THREE.Vector3()
 const targetLook = new THREE.Vector3()
 
 export function CameraRig() {
-  const scrollProgress = useExperienceStore((s) => s.scrollProgress)
-  const mouse = useExperienceStore((s) => s.mouse)
   const { camera } = useThree()
   const currentPos = useRef(new THREE.Vector3(0, 2.5, 14))
   const currentLook = useRef(new THREE.Vector3(0, 1.2, 0))
 
   useFrame(() => {
+    const state = useExperienceStore.getState()
+    const scrollProgress = state.scrollProgress
+    const mouse = state.mouse
+
     const [tx, ty, tz] = getCameraPath(scrollProgress)
     const [lx, ly, lz] = getLookAt(scrollProgress)
 
