@@ -3,7 +3,6 @@ import Lenis from 'lenis'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { useExperienceStore } from '../store/experienceStore'
-import { throttle } from '../utils/performance'
 
 gsap.registerPlugin(ScrollTrigger)
 
