@@ -39,8 +39,8 @@ export function HomePage() {
 
       <div className="relative z-10">
         {/* Hero */}
-        <section className="flex min-h-[92vh] flex-col px-6 pb-24 pt-12 md:px-10 md:pb-24 md:pt-16">
-          <div className="mx-auto my-auto w-full max-w-7xl">
+        <section className="flex flex-col px-6 pb-24 pt-12 md:px-10 md:pb-32 md:pt-16">
+          <div className="mx-auto w-full max-w-7xl">
             <ScrollReveal>
               <p className="section-label mb-4">Natural Fiber Craft</p>
               <h1 className="max-w-3xl font-[family-name:var(--font-display)] text-5xl leading-[1.05] text-cream md:text-7xl lg:text-8xl">
